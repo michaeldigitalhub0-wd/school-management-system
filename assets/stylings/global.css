@@ -1,0 +1,72 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;600;700&display=swap');
+
+:root {
+    /* theme colors */
+    --primary-blue: #0a1a5e;
+    --secondary-blue: #1f3c88;
+    --accent-blue: #4da3ff;
+
+/* Background Colors */
+    --background-color-main: #ffffff; 
+    --background-color-section: #f4f6fb;
+    --card-background: #fafafa;
+
+/* Text colors */
+    --main-text-color: #0b132b;
+    --secondary-text-color: #6c757d;
+    --placeholder-text-color: #adb5bd;
+
+/* Status colors */
+    --success-color: #28A745;
+    --warning-color: #FFC107;
+    --error-color: #DC3545;
+
+/* Border radius */
+    --border-radius: 16px;
+}
+
+:root{
+    --heading-font: 'Poppins', sans-serif;
+    --body-font: 'Open Sans', sans-serif;
+}
+
+/* Base page layout and colors */
+html, body { height: 100%; }
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: var(--body-font);
+    background-color: var(--background-color-main);
+    color: var(--main-text-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings */
+h1, h2, h3, h4 { color: var(--main-text-color); font-family: var(--heading-font); margin: 0 0 0.5rem 0; }
+
+/* Links */
+a { color: var(--primary-blue); text-decoration: none; }
+a:hover, a:focus { color: var(--secondary-blue); text-decoration: underline; }
+
+/* Buttons (default) */
+button {
+    padding: 10px 20px;
+    background: var(--primary-blue);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+button:hover { background: var(--secondary-blue); }
+
+/* Generic containers and sections */
+section { background-color: var(--background-color-section); }
+.card, #card { background-color: var(--card-background); border-radius: var(--border-radius); }
+
+/* Small utilities */
+.muted { color: var(--secondary-text-color); }
+
+

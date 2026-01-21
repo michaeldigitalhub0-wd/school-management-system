@@ -1,0 +1,86 @@
+<!-- LOGIN PAGE -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>   
+    
+    <link rel="stylesheet" href="./assets/stylings/theme.css">
+    <link rel="stylesheet" href="./assets/stylings/global.css">
+    <link rel="stylesheet" href="./assets/stylings/auth.css">
+
+</head>
+ <body>
+    <div id="card">
+        <section id="description">
+            <img src="./assets/images/logo/logo.png" alt="logo.png">
+            <h1>Christ Ambassadors' International College Kaduna</h1>
+            <h2>Empowering Learning Through Technology</h1>
+            <p>Welcome to Christ Ambassadors' International College digital portal, designed to support excellence, accountability, and effective school management.</p>
+            <p>This system enables smooth communication, academic tracking, and access to essential school services for administrators, teachers, students and parents.</p>
+            <p>Kindly login with your credentials to continue.</p>
+        </section>
+        <section id="auth-box">
+            <h1>Login your account</h1>
+            <p>Please enter your details</p>
+            <form>
+                <div class="form-field select-field">
+                    <span class="input-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2a5 5 0 100 10 5 5 0 000-10zM4 20a8 8 0 0116 0v1H4v-1z" fill="currentColor"/></svg>
+                    </span>
+                    <select id="role" name="role" class="role-select" aria-label="Select role">
+                        <option value="" disabled selected>Select role</option>
+                        <option value="admin" id="admin">Admin</option>
+                        <option value="teacher" id="teacher">Teacher</option>
+                        <option value="parent" id="parent">Parent</option>
+                        <option value="student" id="student">Student</option>
+                    </select>
+                    <span class="select-arrow" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5H7z" fill="currentColor"/></svg>
+                    </span>
+                </div>
+
+                <div class="form-field">
+                    <span class="input-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 12c2.761 0 5-2.239 5-5s-2.239-5-5-5-5 2.239-5 5 2.239 5 5 5z" fill="currentColor"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6v1H4v-1z" fill="currentColor"/></svg>
+                    </span>
+                    <input type="text" name="username" id="username" placeholder=" " autocomplete="username">
+                    <label for="username"><span>Username</span></label>
+                </div>
+
+                <div class="form-field">
+                    <span class="input-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M21 10.5a4.5 4.5 0 1 0-6.364 4.09L13 17.226V19h1.774l1.636-1.636A4.5 4.5 0 0 0 21 10.5zM8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" fill="currentColor"/></svg>
+                    </span>
+                    <input type="password" name="userpassword" id="userpassword" placeholder=" " autocomplete="current-password">
+                    <label for="userpassword"><span>Password</span></label>
+                </div>
+
+                <button type="button" id="log_in">Log in</button>
+
+                <div class="form-aux">
+                    <a class="forgot-link" href="#">Forgot password?</a>
+                </div>
+
+                <p class="signup-line">Don't have an account? <a class="signup-link" href="signup.html">Sign up</a></p>
+            </form>
+        </section>
+    </div>
+    <script src="./assets/scripts/storage.js"></script>
+    <script src="./assets/scripts/utils.js"></script>
+    <script src="./assets/scripts/auth.js"></script>
+    <script>
+        (function(){
+            try{
+                const params = new URLSearchParams(location.search);
+                const role = params.get('role');
+                if(role){
+                    const sel = document.getElementById('role');
+                    if(sel) sel.value = role;
+                }
+            }catch(e){ /* ignore */ }
+        })();
+    </script>
+ </body>
+ </html>

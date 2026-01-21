@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Student Dashboard</title>
+	<link rel="stylesheet" href="../../assets/stylings/theme.css">
+	<link rel="stylesheet" href="../../assets/stylings/global.css">
+	<link rel="stylesheet" href="../../assets/stylings/dashboard.css">
+</head>
+<body>
+	<header class="app-header">
+		<div style="display:flex;align-items:center;gap:1rem;"><img src="../../assets/images/logo/logo.png" alt="logo"><div><strong>Student</strong></div></div>
+		<nav class="app-nav">
+			<a href="dashboard.html">Dashboard</a>
+			<a href="attendance.html">Attendance</a>
+			<a href="results.html">Results</a>
+		</nav>
+	</header>
+
+	<main class="app-container">
+		<h1 class="page-title">Welcome, Student</h1>
+		<section class="cards">
+			<div class="card"><div class="number" data-dashboard-key="Results">0</div><div class="label">Results</div></div>
+			<div class="card"><div class="number" data-dashboard-key="Students">0</div><div class="label">Students</div></div>
+		</section>
+
+		<section class="card">
+			<h2 class="page-title">Latest Results</h2>
+			<p class="muted">No results available yet.</p>
+		</section>
+	</main>
+	<script src="../../assets/scripts/storage.js"></script>
+	<script src="../../assets/scripts/utils.js"></script>
+	<script src="../../assets/scripts/app-header.js"></script>
+	<script src="../../assets/scripts/dashboard.js"></script>
+	<script src="../../assets/scripts/student.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+@import url('global.css');
+
+/* Dashboard & app layout styles */
+.app-header{
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	gap:1rem;
+	padding:1rem 2rem;
+	background:var(--card-background);
+	border-bottom:1px solid rgba(11,19,43,0.04);
+}
+.app-header img{ height:44px; width:auto; }
+.app-nav{ display:flex; gap:1rem; align-items:center; }
+.app-nav a{ color:var(--primary-blue); padding:0.45rem 0.75rem; border-radius:8px; text-decoration:none; font-weight:600; }
+.app-nav a:hover{ background: rgba(77,163,255,0.06); }
+
+.app-container{ max-width:1200px; margin:2rem auto; padding:1rem 2rem; }
+.page-title{ font-family:var(--heading-font); font-size:24px; margin-bottom:0.75rem; }
+
+.cards{ display:grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap:1rem; margin-bottom:1rem; }
+.card{ background:var(--card-background); padding:1rem; border-radius:12px; box-shadow: 0 6px 20px rgba(11,19,43,0.04); }
+.card .number{ font-size:1.5rem; font-weight:700; color:var(--primary-blue); }
+.card .label{ color:var(--secondary-text-color); font-size:0.95rem; }
+
+.controls{ display:flex; gap:0.5rem; align-items:center; margin-bottom:1rem; }
+.controls .search{ flex:1; }
+.controls input[type="search"], .controls select{ padding:0.6rem 0.9rem; border-radius:8px; border:1px solid var(--placeholder-text-color); }
+.btn{ padding:0.6rem 0.9rem; border-radius:8px; background:var(--primary-blue); color:#fff; border:none; cursor:pointer; }
+
+.data-table{ width:100%; border-collapse:collapse; background:transparent; }
+.data-table th, .data-table td{ padding:0.75rem 0.9rem; text-align:left; border-bottom:1px solid rgba(11,19,43,0.06); }
+.data-table th{ background:transparent; font-weight:600; color:var(--main-text-color); }
+
+.form-inline{ display:flex; gap:0.5rem; align-items:center; }
+
+@media (max-width:800px){
+	.app-header{ padding:0.5rem 1rem; }
+	.app-container{ padding:0.5rem 1rem; }
+	.page-title{ font-size:20px; }
+}
